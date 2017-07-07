@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Modal Area -->
+    <div id="editTitleModal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3><span>编辑标题</span></h3>
+            </div>
+            <div class="modal-content">
+                <input id="title_content" type="text">
+            </div>
+            <div class="modal-footer">
+                <div id="title_cancel_btn" class="btn btn-sm">取消</div>
+                <div id="title_confirm_btn" class="btn btn-sm">确认</div>
+            </div>
+        </div>
+        <div class="modal-mask"></div>
+    </div>
+    <div id="oneColItemModal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3><span>一列</span></h3>
+            </div>
+            <div class="modal-content">
+                <div class="modal-content-item">
+                    <label for="one_key1">键：</label>
+                    <input name="one_key1" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="one_value1">值：</label>
+                    <input name="one_value1" type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="oneCol_cancel_btn" class="btn btn-sm">取消</div>
+                <div id="oneCol_confirm_btn" class="btn btn-sm">确认</div>
+            </div>
+        </div>
+        <div class="modal-mask"></div>
+    </div>
+    <div id="twoColItemModal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3><span>二列</span></h3>
+            </div>
+            <div class="modal-content">
+                <div class="modal-content-item">
+                    <label for="two_key1">键1：</label>
+                    <input name="two_key1" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="two_value1">值1：</label>
+                    <input name="two_value1" type="text">
+                </div>
+                <div class="modal-content-divide"></div>
+                <div class="modal-content-item">
+                    <label for="two_key2">键2：</label>
+                    <input name="two_key2" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="two_value2">值2：</label>
+                    <input name="two_value2" type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="twoCol_cancel_btn" class="btn btn-sm">取消</div>
+                <div id="twoCol_confirm_btn" class="btn btn-sm">确认</div>
+            </div>
+        </div>
+        <div class="modal-mask"></div>
+    </div>
+    <div id="threeColItemModal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3><span>三列</span></h3>
+            </div>
+            <div class="modal-content">
+                <div class="modal-content-item">
+                    <label for="three_key1">键1：</label>
+                    <input name="three_key1" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="three_value1">值1：</label>
+                    <input name="three_value1" type="text">
+                </div>
+                <div class="modal-content-divide"></div>
+                <div class="modal-content-item">
+                    <label for="three_key2">键2：</label>
+                    <input name="three_key2" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="three_value2">值2：</label>
+                    <input name="three_value2" type="text">
+                </div>
+                <div class="modal-content-divide"></div>
+                <div class="modal-content-item">
+                    <label for="three_key3">键3：</label>
+                    <input name="three_key3" type="text">
+                </div>
+                <div class="modal-content-item">
+                    <label for="three_value3">值3：</label>
+                    <input name="three_value3" type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="threeCol_cancel_btn" class="btn btn-sm">取消</div>
+                <div id="threeCol_confirm_btn" class="btn btn-sm">确认</div>
+            </div>
+        </div>
+        <div class="modal-mask"></div>
+    </div>
+    <!-- ./Modal Area -->
+    <!-- Picker Area:从底部弹起的选择区域 -->
+    <div id="colNumPicker" class="picker">
+        <div class="picker-main">
+            <div class="picker-items">
+                <div data-idx="1" class="picker-item">一列</div>
+                <div data-idx="2" class="picker-item">二列</div>
+                <div data-idx="3" class="picker-item">三列</div>
+            </div>
+            <div id="picker_cancel_btn" class="picker-cancel">
+                取消
+            </div>
+        </div>
+        <div class="picker-mask"></div>
+    </div>
+    <!-- ./Picker Area -->
+    <div class="header">
+        <h1><span id="editTitle">点击编辑标题</span></h1>
+    </div>
+    <div class="container">
+        <div id="item_list">
+            <!--  一列的格式 -->
+            <!-- <div class="item item-1">
+                <div class="item-col">
+                    <div class="item-key-wrap">
+                        <p class="item-col-key">项目的strangesss值value以及book值：</p>
+                        <span></span>
+                    </div>
+                    <p class="item-col-value">项目介绍。</p>
+                </div>
+            </div> -->
+            <!-- 二列的格式 -->
+            <!-- <div class="item item-2">
+            </div> -->
+            <!-- 三列的格式 -->
+            <!-- <div class="item item-3">
+            </div> -->
+        </div>
+        <div id="add_item_btn" class="btn">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+        <div class="bottom">
+            <div class="other_func">
+                <span class="btn_pdf">pdf</span>
+                <span class="btn_hidden">隐藏</span>
+                <span class="btn_html">html</span>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>

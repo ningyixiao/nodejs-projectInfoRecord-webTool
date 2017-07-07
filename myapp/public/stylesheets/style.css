@@ -1,0 +1,332 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 span,
+h3 span {
+    font-weight: 400;
+}
+
+
+/* modal style */
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.modal-box {
+    position: absolute;
+    z-index: 120;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    height: 200px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    border-radius: 6px;
+    background: #fff;
+}
+
+#oneColItemModal .modal-box {
+    height: 240px;
+}
+
+#twoColItemModal .modal-box {
+    top: 15%;
+    height: 340px;
+}
+
+#threeColItemModal .modal-box {
+    top: 10%;
+    height: 445px;
+}
+
+.modal-md {
+    top: 10%;
+    margin-left: -200px;
+    height: 500px;
+    width: 600px;
+}
+
+.modal-lg {
+    top: 5%;
+    margin-left: -200px;
+    height: 700px;
+    width: 600px;
+}
+
+.modal-box .modal-header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-box .modal-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.modal-box .modal-content>input {
+    width: 80%;
+    height: 2rem;
+    font-size: 1.1rem;
+}
+
+.modal-box .modal-content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.modal-box .modal-content-item label {
+    flex: 1;
+}
+
+.modal-box .modal-content-item input {
+    flex: 5;
+    height: 1.6rem;
+    font-size: 0.8rem;
+}
+
+.modal-content-divide {
+    margin: 1rem 0;
+    margin-left: 0.8rem;
+    border-top: 1px solid #ddd;
+}
+
+.modal-box .modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.modal-box .modal-footer .btn:nth-child(2) {
+    margin-left: 1rem;
+}
+
+.modal-mask {
+    position: absolute;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/* picker style */
+
+.picker {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.picker-main {
+    position: absolute;
+    z-index: 120;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.picker-main .picker-items,
+.picker-main .picker-cancel {
+    background-color: #fff;
+}
+
+.picker-main .picker-item {
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.picker-main .picker-item:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.picker-main .picker-item:nth-child(1) {
+    border-top: 0;
+}
+
+.picker-main .picker-cancel {
+    margin-top: .5rem;
+    padding: 1rem;
+    text-align: center;
+    color: #f00;
+}
+
+.picker-main .picker-cancel:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.picker-mask {
+    position: absolute;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/* header style */
+
+.header {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header h1 span:hover {
+    cursor: pointer;
+}
+
+
+/* main style */
+
+.container {
+    position: relative;
+    width: 80%;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 33%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.btn_hover {
+    background: #ddd;
+    cursor: pointer;
+}
+
+.btn-sm {
+    width: 20%;
+}
+
+
+/* container>bottom style */
+
+.bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -2rem;
+}
+
+.bottom .other_func {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom .other_func span {
+    padding: 0 0.5rem;
+}
+
+.bottom .other_func span:hover {
+    color: #f00;
+    cursor: pointer;
+}
+
+
+/* item list style */
+
+.item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    text-align: unset;
+}
+
+.item-col {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    text-align: unset;
+}
+
+.item.item-1 .item-col {
+    width: 100%;
+}
+
+.item.item-2 .item-col {
+    width: 45%;
+}
+
+.item.item-3 .item-col {
+    width: 30%;
+}
+
+.item-col div.item-key-wrap {
+    flex: 1;
+    display: flex;
+    margin: 0;
+    text-align: right;
+    font-weight: 500;
+}
+
+.item-col div.item-key-wrap p {
+    flex: 12;
+    margin: 0;
+    /* 键如果是英文，则使其自动断行，但是在这里并没有解决 */
+    word-wrap: break-word;
+}
+
+.item-col div.item-key-wrap span {
+    flex: 1;
+}
+
+.item-col p.item-col-value {
+    flex: 2;
+    margin: 0;
+    text-align: left;
+    /* 键如果是英文，则使其自动断行，但是在这里并没有解决 */
+    word-wrap: break-word;
+}
+
+.item-1 .item-col div.item-key-wrap {
+    flex: 1;
+}
+
+.item-1 .item-col p.item-col-value {
+    flex: 9;
+}
+
+.item-2 .item-col div.item-key-wrap {
+    flex: 2;
+}
+
+.item-2 .item-col p.item-col-value {
+    flex: 7;
+}

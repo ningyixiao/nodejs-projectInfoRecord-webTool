@@ -1,0 +1,25 @@
+{
+  "name": "project-inforecord-nodejs-tool",
+  "version": "1.0.0",
+  "description": "record project infomation",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ningyixiao/nodejs-projectInfoRecord-webTool.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "ningyixiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ningyixiao/nodejs-projectInfoRecord-webTool/issues"
+  },
+  "homepage": "https://github.com/ningyixiao/nodejs-projectInfoRecord-webTool#readme",
+  "devDependencies": {
+    "express": "^4.15.3"
+  }
+}
