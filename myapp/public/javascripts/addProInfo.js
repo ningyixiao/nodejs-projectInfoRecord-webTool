@@ -1,3 +1,13 @@
+function getHostPath() {
+    //获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+    var fullPath = window.document.location.href;
+    //获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
+    var pathName = window.document.location.pathname;
+    var pos = fullPath.indexOf(pathName);
+    //获取主机地址，如： http://localhost:8083
+    var localhostPath = fullPath.substring(0, pos);
+    return localhostPath;
+}
 $(function() {
     // 全局变量
     var global_data = {
@@ -177,47 +187,56 @@ $(function() {
             $("#add_item_btn").css("display", "none");
             $(this).html("显示");
             global_data.add_item_btn = false;
-        }else{
+        } else {
             $("#add_item_btn").css("display", "inline-block");
             $(this).html("隐藏");
             global_data.add_item_btn = true;
         }
     });
     // 保存html按钮相关事件
-    $(".btn_html").click(function(){
-        var htmlCode = "<!DOCTYPE html>"+document.documentElement.outerHTML;
+    $(".btn_html").click(function() {
+        $("#setHtmlNameModal").css("display", "block");
+    });
+    $("#setName_cancel_btn").click(function() {
+        $("#setHtmlNameModal").css("display", "none");
+    });
+    $("#setName_confirm_btn").click(function() {
+        var htmlCode = "<!DOCTYPE html>" + document.documentElement.outerHTML;
+        var htmlFileName = $("#html_fileName").val();
         $.ajax({
-            url:'/html',
-            type:'post',
-            data:{"code":htmlCode},
+            url: '/html',
+            type: 'post',
+            data: { "code": htmlCode, "fileName": htmlFileName },
             dataType: 'json',
-            success:function(data){
+            success: function(data) {
                 alert(data.msg);
                 // console.log("1");
+                window.location.href = getHostPath()+"/";
             },
-            error:function(){
+            error: function() {
                 // console.log("2");
             }
         });
     });
     // 下载pdf按钮相关事件
-    $(".btn_pdf").click(function(){
+    $(".btn_pdf").click(function() {
         var pageUrl = window.document.location.href;
         var pathName = window.document.location.pathname;
-        if(pathName == '/add'){
+        if (pathName == '/add') {
             alert('请在生成的html页面中进行生成pdf操作');
             return;
         }
         $.ajax({
-            url:'/pdf',
-            type:'get',
-            data:{"pageUrl":pageUrl},
+            url: '/pdf',
+            type: 'get',
+            data: { "pageUrl": pageUrl },
             dataType: 'json',
-            success:function(data){
+            success: function(data) {
                 alert(data.msg);
                 // console.log("1");
+                window.location.href = getHostPath()+"/";
             },
-            error:function(){
+            error: function() {
                 // console.log("2");
             }
         });

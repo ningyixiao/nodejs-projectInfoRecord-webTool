@@ -164,7 +164,8 @@ router.post('/html', urlencodedParser, function(req, res, next) {
        要使req.body可用，可使用中间件body-parser
     */
     var code = req.body.code;
-    fs.writeFile('public/html/1.html', code, (err) => {
+    var fileName = req.body.fileName;
+    fs.writeFile('public/html/'+fileName+'.html', code, (err) => {
         if (err) {
             console.log("save file fail.")
             res.json({ "msg": "保存失败", "state": 0 });
