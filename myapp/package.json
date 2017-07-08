@@ -15,6 +15,7 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
-    "phantom": "^4.0.4"
+    "phantom": "^4.0.4",
+    "rd": "^1.0.0"
   }
 }

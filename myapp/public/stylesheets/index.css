@@ -1,0 +1,105 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+/* header style */
+
+.header {
+    padding: 0 10%;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.main {
+    padding: 0 10%;
+}
+
+.main .project_list .project {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-left: calc((100% - 800px)/3);
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+}
+
+.main .project_list .project.no-padding {
+    margin-left: 0;
+}
+
+.project .pro_desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.project .pro_desc p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    /* 超出5行则显示省略号 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.add_new_project {
+    font-size: 3rem;
+    color: rgba(0,0,0,0.6);
+}
+.add_new_project:hover{
+    background: #ddd;
+    color: rgba(0,0,0,0.9);
+    cursor: pointer;
+}
+
+.project .mask {
+    position: absolute;
+    overflow: hidden;
+    z-index: 100;
+    top: 199px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: top .3s linear;
+}
+
+.project .mask_hover {
+    top: -1px;
+}
+
+.project .mask .btn_area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .mask .btn_area span {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.project .mask .btn_area span:hover {
+    cursor: pointer;
+    color: #FF9900;
+}

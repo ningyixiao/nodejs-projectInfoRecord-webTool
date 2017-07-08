@@ -1,1 +1,16 @@
-include html/main.html
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title='项目信息记录'
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css')
+  body
+    div(class="header")
+        h1(class="title")='项目列表'
+    div(class="main")
+        div(class="project_list")
+            include html/index.html
+    div(class="footer")
+    script(src="/javascripts/jquery.min.js")
+    script(src="/javascripts/index.js")
