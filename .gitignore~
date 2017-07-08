@@ -1,0 +1,7 @@
+/node_modules/
+/myapp/bin/
+/myapp/node_modules/
+.gitignore
+.DS_Store
+*/.DS_Store
+**/.DS_Store

@@ -78,6 +78,13 @@ function generateIndexHTML(fileNameArr, titleArr) {
 
 // GET index page
 router.get('/', function(req, res, next) {
+    // 先判断public/html以及public/pdf是否存在
+    if(!fs.existsSync('public/html')){
+        fs.mkdirSync('public/html');
+    }
+    if(!fs.existsSync('public/pdf')){
+        fs.mkdirSync('public/pdf');
+    }
     fs.readdir('public/html', (err, files) => {
         if (err) throw err;
         var str = files.join();
